@@ -222,5 +222,3 @@ mvn clean package
 This project is for demonstration purposes.
 
 ---
-
-For detailed test documentation, see [Test Suite Documentation](README_TESTS.md). 
