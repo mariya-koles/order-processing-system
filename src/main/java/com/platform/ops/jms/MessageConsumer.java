@@ -19,6 +19,10 @@ public class MessageConsumer {
     @JmsListener(destination = "orders.queue")
     public void receiveOrder(Order order) {
         log.info("Received order: {}", order);
+
+        // Uncomment these lines in receiveOrder method:
+        // log.error("Forcing failure for order: {} - This will trigger DLQ after retries", order.getOrderId());
+        // throw new RuntimeException("Forced processing failure for DLQ test");
     }
 
     @JmsListener(destination = "orders.DLQ")
